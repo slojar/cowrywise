@@ -1,5 +1,6 @@
 # cowrywise
 This is a crowrywise test
 
-Clone the repo to your localhost 
-Endpoint: localhost:8000/api/
+#API is publicly available on the following url: 
+https://cowrywise.herokuapp.com/api/
+
