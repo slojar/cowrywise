@@ -11,13 +11,10 @@ class AnswerView(APIView):
         try:
             # Create new UUID instance
             Answer.objects.create()
-
             # Get all UUID instance (with latest at the top)
             all_items = Answer.objects.all().order_by('-id')
 
-            answer = dict()
-            for item in all_items:
-                answer[str(item.key)] = str(item.value).replace("-", "")
+            answer = {str(item.key): str(item.value).replace("-", "") for item in all_items}
 
             return Response(answer)
         except Exception as ex:
